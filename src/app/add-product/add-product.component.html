@@ -1,0 +1,72 @@
+<!-- <h1> Ajouter un Produit </h1>
+<form [formGroup]= "formsAdd" >
+ 
+  
+  <div class="form-group">
+    <label>ID</label>
+    <input type="number" class="form-control" placeholder="Entrez l'ID du produit" formControlName="id">
+   
+    <div class="alert alert-danger" *ngIf="formsAdd.controls['id'].invalid && formsAdd.controls['id'].touched">
+      <p *ngIf="formsAdd.get('id')?.errors?.['required']">L'ID est obligatoire !</p>
+      <p *ngIf="formsAdd.get('id')?.errors?.['min']">L'ID doit être un nombre positif.</p>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label>Titre</label>
+    <input type="text" class="form-control" placeholder="Entrez le titre du produit" formControlName="title">
+      
+    <div class="alert alert-danger" *ngIf="formsAdd.controls['title'].invalid && formsAdd.controls['title'].touched">
+      <p *ngIf="formsAdd.get('title')?.errors?.['required']">Le titre est obligatoire !</p>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label>Prix</label>
+    <input type="number" class="form-control" placeholder="Entrez le prix du produit" formControlName="price">
+    
+    
+    
+    <div class="alert alert-danger" *ngIf="formsAdd.controls['price'].invalid && formsAdd.controls['price'].touched">
+      <p *ngIf="formsAdd.get('price')?.errors?.['required']">Le prix est obligatoire !</p>
+      <p *ngIf="formsAdd.get('price')?.errors?.['min']">Le prix doit être un nombre positif.</p>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label>Quantité</label>
+    <input type="number" class="form-control" placeholder="Entrez la quantité du produit" formControlName="quantity">
+
+    
+    <div class="alert alert-danger" *ngIf="formsAdd.controls['quantity'].invalid && formsAdd.controls['quantity'].touched">
+      <p *ngIf="formsAdd.get('quantity')?.errors?.['required']">La quantité est obligatoire !</p>
+      <p *ngIf="formsAdd.get('quantity')?.errors?.['pattern']">La quantité doit être un nombre entier positif.</p>
+    </div>
+  </div>
+
+    
+    <div class="form-group">
+      <label>Likes</label>
+      <input type="number" class="form-control" placeholder="Entrez le nombre de likes" formControlName="like">
+      
+      
+      <div class="alert alert-danger" *ngIf="formsAdd.controls['like'].invalid && formsAdd.controls['like'].touched">
+        <p *ngIf="formsAdd.get('like')?.errors?.['required']">Le nombre de likes est obligatoire !</p>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Image</label>
+      <input type="text" class="form-control" placeholder="Entrez l'URL de l'image" formControlName="image">
+
+      <div class="alert alert-danger" *ngIf="formsAdd.controls['image'].invalid && formsAdd.controls['image'].touched">
+        <p *ngIf="formsAdd.get('image')?.errors?.['required']">L'URL de l'image est obligatoire !</p>
+      </div>
+    </div>
+  
+    
+    <button type="submit" class="btn btn-primary" (click)="add()" [disabled]="formsAdd.invalid"> Submit</button>
+  </form> -->

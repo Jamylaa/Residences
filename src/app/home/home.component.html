@@ -1,0 +1,48 @@
+<h1><p> home works !</p>  </h1>
+{{title}}
+<br>
+
+<input type="text" placeholder="user" [(ngModel)]="age" >
+
+<!-- <div  *ngFor="let u of user" >
+        {{u.id}} {{u.name}} {{u.age}} {{u.email}}
+</div> -->
+
+<div  *ngFor="let u of user" > 
+        
+ <ng-container *ngIf="u.age>age">
+  {{u.id}} {{u.name}} {{u.age}} {{u.email}}
+</ng-container>
+</div>
+
+<br>
+
+<input class="input-group"  type="text" placeholder=" search By Age" >
+ <br>
+ <br>
+<input  class="input-group flex-nowrap" type="text" placeholder="user" [(ngModel)]="age" >
+
+<!-- <div  *ngFor="let u of user" >
+        {{u.id}} {{u.name}} {{u.age}} {{u.email}}
+</div> -->
+
+<!-- <div  *ngFor="let u of user" >
+ <ng-container *ngIf="u.age>age">
+  {{u.id}} {{u.name}} {{u.age}} {{u.email}}
+</ng-container>
+</div> -->
+ <br>
+ <br>
+<input type="text" placeholder="color" [(ngModel)]="color"  >
+
+<div><p [style.backgroundColor]="color" > Joujou </p> </div>
+<br> 
+
+ {{color}}
+<button  class="btn btn-primary" (click)="show()"  save >
+    save 
+</button>
+
+<br>
+
+ {{color}}

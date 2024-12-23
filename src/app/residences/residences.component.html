@@ -1,0 +1,44 @@
+<button [routerLink]="['/addRes']">Add</button>
+
+
+
+<!-- Filtre de recherche -->
+<input type="text" placeholder="Rechercher par adresse" [(ngModel)]="filterAddress" />
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4 mb-4" *ngFor="let residence of getFilteredResidences()" class="residence">
+
+
+            <h3>{{ residence.name }}</h3>
+            <img [src]="residence.image" alt="{{ residence.name }}" width="200px" />
+            <!-- Bouton "Show Location" -->
+            <button (click)="showLocation(residence.address)">Show Location</button>
+            <div *ngIf="residence.address !== 'inconnu'">
+                Adresse : {{ residence.address }}
+            </div>
+            <!-- Statut avec NgSwitch -->
+            <div [ngSwitch]="residence.status">
+                <p *ngSwitchCase="'Disponible'">✅ Disponible</p>
+                <p *ngSwitchCase="'En Construction'">🚧 En Construction</p>
+                <p *ngSwitchCase="'Vendu'">❌ Vendu</p>
+                <p *ngSwitchDefault>⚪ Statut inconnu</p>
+            </div>
+            <div>
+                <!-- Bouton "Like" -->
+                <button (click)="addToFavorites(residence)">Like</button>
+                <button [routerLink]="['/detailR',residence.id]">details</button>
+                <button (click)="supp(residence.id)">Delete</button>
+                <button [routerLink]="['/showAppart',residence.id]">Show Appat</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Résidences favorites -->
+<h3>Favoris</h3>
+<ul>
+    <li *ngFor="let fav of favorites">{{ fav.name }}</li>
+</ul>

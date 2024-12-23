@@ -1,0 +1,18 @@
+<p>appartments works!</p>
+<table >
+    <tr>
+        <th> AppartNum</th>
+        <th>FloorNum</th>
+        <th> Surface</th>
+        <th> terrace</th>
+        <th>category</th>
+    </tr>
+
+    <tr *ngFor="let a of listFilter">
+        <td>{{a.appartNum}}</td>
+        <td>{{a.floorNum}}</td>
+        <td>{{a.category}}</td>
+        <td>{{a.terrace}}</td>
+        <td> {{a.surfaceTerrace}} </td>
+</table>
+{{id}}
